@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+:root{
+    /* COLORS */
+    --blue: hsl(223, 87%, 63%);
+    --red: hsl(354, 100%, 66%);
+    --pale-blue:hsl(223, 100%, 88%);
+    --gray: hsl(0, 0%, 59%) ;
+    --dark-blue: hsl(209, 33%, 12%)   ;
+
+    --fw-thin: 300;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+}
+
+body{
+
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo{
+    width: 12%;
+    padding-top:2rem;
+    margin: 2rem 0;
+}
+.heading{
+    color: var(--gray);
+    font-weight:var(--fw-thin);
+    font-size: 2rem;
+}
+.bold{
+    font-weight: var(--fw-bold);
+    color: var(--dark-blue);
+}
+
+.description{
+    margin: 1.25rem 0;
+    font-weight: var(--fw-thin);
+    width: 50%;  
+}
+
+.input-btn-group{
+    width: 70%;
+    text-align: center;
+}
+.notif-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+input{
+    border-radius: 50px;
+    border: 1px solid var(--pale-blue);
+    width: 100%;
+    margin: 1rem 0;
+    height: 50px;
+    padding-left: 2rem;
+}
+
+input::placeholder{
+    color: var(--gray);
+    font-weight: var(--fw-thin);
+    opacity: 0.5;
+}
+input:focus {
+    outline: 3px solid red;
+  }
+
+#required-email{
+    color: var(--red);
+    font-size: .8rem;
+    font-weight: var(--fw-thin);
+    font-style: italic;
+    margin-top: -.5rem;
+    text-align: center;
+}
+
+
+
+button{
+    width: 100%;
+    background: var(--blue);
+    color: white;
+    border: none;
+    height: 50px;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.2);
+    border-radius: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.dashboard{
+    width: 80%;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.social-container{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.facebook, .twitter, .instagram{
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--pale-blue);
+}
+.facebook:hover, .twitter:hover, .instagram:hover{
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+}
+
+.copyright{
+    color: var(--gray);
+    font-weight: var(--fw-thin);
+    font-size: .75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 767px){
+    main{
+        width: 60%;
+        margin-inline: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex; 
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo{
+        width: 9%;
+    }
+    .input-btn-group{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .notif-input{
+        display: flex;
+        flex-direction: column;
+    }
+    .dashboard{
+        margin-top: 2.5rem;
+    }
+    #required-email{
+        color: var(--red);
+        font-size: .8rem;
+        font-weight: var(--fw-thin);
+        font-style: italic;
+        margin-top: -.5rem;
+        text-align: center;
+    }
+    button{
+        width: 40%;
+        margin-left: 1rem;
+    }
+    .social-container{
+        margin-top: -2.5rem;
+    }
+}
