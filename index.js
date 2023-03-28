@@ -19,14 +19,14 @@ const isEmailValid = input => {
 
 const displayError = (input, err) => {
     const inputParent = input.parentElement;
-    inputParent.className = 'main__input';
+    inputParent.className = 'main__input error';
     const errMessage = document.querySelector('#required-email');
     errMessage.textContent = err;
 };
 
 const displaySuccess = input => {
     const inputParent = input.inputParent;
-    inputParent.className = 'main__input';
+    inputParent.className = 'main__input success';
     input.value = '';
 };
 
